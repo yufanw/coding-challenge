@@ -61,6 +61,7 @@ The user clicks on the avatar to open a popover which allows the user to choose 
 
 (you may adjust the paths to your needs of course)
 
+* Requested browser compatibility: IE11 and up, current versions of Chrome, FF, Safari
 * You may split up the main component in as many sub-components as you see fit
 * The whole component must also be fully usable when just using a keyboard
 * Think of it as a component that will end up in a large, scalable react app. Consider this when writing HTML and CSS as well.
