@@ -83,5 +83,6 @@ The user clicks on the avatar to open a popover which allows the user to choose 
   * thiago@colony.io
 * Or create a public repository and send the link to both of these email addresses
 * Or send the whole repository, zipped (including the `.git` directory) to both of these email addresses
+* Important note: please only submit your work when it is completely done!
 
 Happy coding! :heart:
