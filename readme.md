@@ -86,3 +86,8 @@ The user clicks on the avatar to open a popover which allows the user to choose 
 * Important note: please only submit your work when it is completely done!
 
 Happy coding! :heart:
+
+
+### Attributions
+
+* Avatar icons by <a href="http://www.freepik.com/free-photos-vectors/people">Freepik</a>
