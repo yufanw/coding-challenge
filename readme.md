@@ -91,3 +91,8 @@ Happy coding! :heart:
 ### Attributions
 
 * Avatar icons by <a href="http://www.freepik.com/free-photos-vectors/people">Freepik</a>
+
+### License
+
+Some people seem to be forking and using this. That's great! If you like, submit your findings by creating an issue or submitting a PR.
+This repo is published under the MIT Licnse.
