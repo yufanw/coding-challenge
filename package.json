@@ -13,5 +13,5 @@
     "eject": "react-scripts eject"
   },
   "repository": "https://github.com/yufanw/coding-challenge",
-  "license": "ISC"
+  "license": "MIT"
 }
