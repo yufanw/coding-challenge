@@ -30,7 +30,7 @@ class App extends Component {
         <div className={activeClass} onClick={this.open}>
           <img src={this.state.selected.src} alt={this.state.selected.label} />
         </div>
-        <div className={this.state.open ? "popover" : "hide"}>
+        <div className={this.state.open ? "popover" : "popover hide"}>
           <div className="triangle" />
           <div className="box">
             <div className="title">Choose your avatar</div>
@@ -50,7 +50,7 @@ class App extends Component {
         </div>
       </div>
     );
-  }
+  };
 }
 
 App.propTypes = {
