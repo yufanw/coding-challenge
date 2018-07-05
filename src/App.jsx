@@ -1,24 +1,44 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
-import Avatar from "./Avatar";
+import Popover from "./Popover";
 
 class App extends Component {
-  state = {
-    selected: this.props.avatars[0],
-    open: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: this.props.avatars[0],
+      open: false
+    };
+    this.popoverRef = React.createRef();
+  }
 
-  open = () => {
-    this.setState(prevState => ({
-      open: !prevState.open
-    }));
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  toggle = (bool) => {
+    this.setState({
+      open: bool
+    });
   };
+  
 
   select = (avatar) => {
     this.setState({
       selected: avatar
     });
+  }
+
+  handleClickOutside = (event) => {
+    if (this.popoverRef && !event.target.contains(this.popoverRef.current)) {
+      return;
+    }
+    this.toggle(false);
   }
 
   render() {
@@ -27,26 +47,17 @@ class App extends Component {
       : "selected circle";
     return (
       <div className="App">
-        <div className={activeClass} onClick={this.open}>
+        <div className={activeClass} onClick={() => {this.toggle(true)}}>
           <img src={this.state.selected.src} alt={this.state.selected.label} />
         </div>
-        <div className={this.state.open ? "popover" : "popover hide"}>
-          <div className="triangle" />
-          <div className="box">
-            <div className="title">Choose your avatar</div>
-            <div className="avatars">
-              {this.props.avatars.map(avatar => {
-                return (
-                  <Avatar 
-                    key={avatar.id}
-                    avatar={avatar}
-                    selected={this.state.selected}
-                    select={this.select}
-                  />
-                );
-              })}
-            </div>
-          </div>
+        <div ref={this.popoverRef}>
+          <Popover 
+            open={this.state.open}
+            avatars={this.props.avatars}
+            selected={this.state.selected}
+            select={this.select}
+            toggle={this.toggle}
+          />
         </div>
       </div>
     );

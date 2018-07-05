@@ -14,6 +14,7 @@ class Avatar extends Component {
       this.setState({
         loading: false
       });
+      this.props.toggle(false);
     }, 700);
   };
 
