@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import Picker from "./Picker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Picker />, document.getElementById("root"));
