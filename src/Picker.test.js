@@ -1,6 +1,6 @@
-import React from "React";
+import React from "react";
 import enzyme, { shallow } from "enzyme";
-import App from "./App";
+import Picker from "./Picker";
 import EnzymeAdapter from "enzyme-adapter-react-16";
 
 enzyme.configure({ adapter: new EnzymeAdapter() });
@@ -15,13 +15,13 @@ const defaultAvatars = [
 ];
 
 it("should render with default state", () => {
-  const wrapper = shallow(<App />);
+  const wrapper = shallow(<Picker />);
   expect(wrapper.state("selected")).toEqual(defaultAvatars[0]);
   expect(wrapper.state("open")).toBe(false);
 });
 
 it("should set open state to true when avatar is clicked", () => {
-  const wrapper = shallow(<App />);
+  const wrapper = shallow(<Picker />);
   expect(wrapper.state("open")).toEqual(false);
   wrapper.find(".selected").simulate("click");
   expect(wrapper.state("open")).toEqual(true);

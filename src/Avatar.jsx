@@ -9,6 +9,10 @@ class Avatar extends Component {
     this.setState({
       loading: true
     });
+    this.makeRequest();
+  };
+
+  makeRequest = () => {
     setTimeout(() => {
       this.props.select(this.props.avatar);
       this.setState({
@@ -16,7 +20,7 @@ class Avatar extends Component {
       });
       this.props.toggle(false);
     }, 700);
-  };
+  }
 
   render() {
     let iconClass = this.state.loading ? "circle container" : "inactive circle container";
