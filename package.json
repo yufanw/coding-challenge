@@ -2,6 +2,8 @@
   "name": "coding-challenge",
   "version": "0.1.0",
   "dependencies": {
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -10,7 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --env=jsdom"
   },
   "repository": "https://github.com/yufanw/coding-challenge",
   "license": "MIT"
