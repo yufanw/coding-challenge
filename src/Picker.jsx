@@ -14,11 +14,11 @@ class Picker extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('mousedown', this.handleClickOutside);
+    window.addEventListener('click', this.handleClickOutside);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('mousedown', this.handleClickOutside);
+    window.removeEventListener('click', this.handleClickOutside);
   }
 
   toggle = (bool) => {
